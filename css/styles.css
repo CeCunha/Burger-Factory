@@ -1,0 +1,243 @@
+body{
+    padding: 0 20px 0 20px;
+    text-align: center;
+}
+
+
+.menu1, .menu2, .menu3, .menu4, .menu5, .menu6 {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+  
+.visible {
+    opacity: 1;
+    height: auto;
+}
+
+.col-sm-2{
+    text-align: left;
+}
+
+
+.icons{
+    width: 66px;
+}
+
+.iconName, span{
+    display: inline-block;
+}
+
+.iconName{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2;
+    
+}
+span{
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+
+label{
+    display: inline-block;
+    padding: 3px;
+    border: solid 3px #dbdbdb;
+    border-radius: 100%;
+    transition: all 0.3s;
+    margin-right: 5px;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    border: solid 3px orange;
+}
+
+input[type="checkbox"]:checked + label {
+    border: solid 3px orange;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+    border-bottom: #dbdbdb 2px solid;
+    padding-bottom: 10px;
+    color: #412515;;
+}
+
+h2{
+    font-size: 2rem;
+    margin-top: 40px !important;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #412515;;
+
+}
+
+
+.mainContainer{
+    text-align: center;
+    background: orange;
+    background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 7px,
+    rgb(255, 157, 0) 9px,
+    rgb(255, 153, 0) 13px,
+    transparent 13px
+  );
+}
+
+.logo{
+    width: 200px;
+    animation: blink 1s infinite;
+}
+ 
+@keyframes blink {
+    to {
+        filter: drop-shadow(2px 2px 10px #ffffff);
+    }
+}
+
+.firstContainer{
+    background-color: #412515;
+    height: 20px;
+}
+
+.mainContainer2{
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+}
+
+
+
+
+button {
+    
+    display: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #412515;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+	background: orange;
+	border: 2px solid rgba(0, 0, 0, 0);
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+	transition: 500ms;
+    border-radius: 15px;
+}
+
+button:after {
+	content: '';
+	position: absolute;
+	transform: translateX(-55px) translateY(-40px);
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: transparent;
+	box-shadow: 0px 0px 50px transparent;
+	transition: 500ms;
+}
+
+button:hover {
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+}
+
+button:hover:after {
+	background: white;
+	box-shadow: 0px 0px 20px #ffc421, 0px 0px 30px #ffc421, inset 0px 0px 10px #ffc421;
+	animation: spin 1s infinite linear;
+}
+
+@keyframes spin{
+	25%{transform: translateX(-25px) translateY(-35px);
+			width: 15px;
+			height: 15px;}
+	50% {transform: translateX(-55px) translateY(-30px);
+			width: 5px;
+			height: 5px;}
+	75% {transform: translateX(-85px) translateY(-35px);
+			width: 15px;
+			height: 15px;}
+}
+
+button:focus {
+	outline: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.612);
+    z-index: 9998;
+    display: none;
+}
+
+.popup {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    z-index: 9999;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.confirmBtn{
+    display: inline;
+    background-color: green;
+    color: white;
+}
+
+.backBtn{
+    background-color: red;
+    display: inline;
+    color: white;
+}
+
+.popupLogo{
+    width: 100px;
+}
+.result{
+    font-family: 'Ubuntu', sans-serif;
+    color: #412515;
+}
+
+@media screen and (max-width: 600px){
+    .popup{
+        width: 400px;
+        height: 500px;
+    }
+
+    .logo{
+        width: 150px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+
+  }
+
+  
